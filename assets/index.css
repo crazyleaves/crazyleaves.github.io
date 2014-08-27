@@ -4,16 +4,16 @@
   position: relative;
   float: left;
 }
-.box div{
+.box div {
   vertical-align: middle;
 }
-.quarter{
+.quarter {
   width: 25%;
 }
-.half{
+.half {
   width: 50%;
 }
-.whole{
+.whole {
   width: 100%;
 }
 /*{{{盾牌*/
@@ -22,9 +22,7 @@
   width: 200px;
   height: 200px;
   padding: 10px;
-  background: -webkit-linear-gradient(-45deg, rgba(255,255,255,0) 35%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 65%),
-              -webkit-linear-gradient(45deg, rgba(255,255,255,0) 35%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 65%),
-              -webkit-radial-gradient(#10239b 30px, #d32526 30px, #d32526 38%, #d6d6d6 38%, #d6d6d6 55%, #d32526 55%, #d32526 70%);
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 65%), -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 65%), -webkit-radial-gradient(#10239b 30px, #d32526 30px, #d32526 38%, #d6d6d6 38%, #d6d6d6 55%, #d32526 55%, #d32526 70%);
   border-radius: 50%;
   box-shadow: 1px 2px 0 #a20917;
   position: relative;
@@ -55,43 +53,42 @@
   width: 200px;
   height: 200px;
   border-radius: 15%;
-  background: -webkit-linear-gradient(top,#fa7105,#f6a21b);
+  background: -webkit-linear-gradient(top, #fa7105, #f6a21b);
   position: relative;
   box-shadow: 1px 4px 8px #666;
   overflow: hidden;
 }
 #rss:before {
-  content:" ";
+  content: " ";
   position: absolute;
   top: 5px;
   left: 5px;
   width: 180px;
   height: 180px;
-  border: 5px solid rgba(255,255,255,0.5);
+  border: 5px solid rgba(255, 255, 255, 0.5);
   display: block;
   border-radius: 15%;
-
 }
 #rss:after {
-  content:" ";
+  content: " ";
   position: absolute;
   top: -100%;
   left: -75%;
   width: 250%;
   height: 150%;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   display: block;
   border-radius: 50%;
 }
-#rss .rss{
+#rss .rss {
   width: 70%;
   height: 70%;
-  background: -webkit-radial-gradient(bottom left, circle, transparent 35%, #fff 35%, #fff 49%, transparent 49%, transparent 56%, #fff 56%, #fff 70%, transparent 70% );
+  background: -webkit-radial-gradient(bottom left, circle, transparent 35%, #ffffff 35%, #ffffff 49%, transparent 49%, transparent 56%, #ffffff 56%, #ffffff 70%, transparent 70%);
   position: relative;
   top: 13%;
   left: 15%;
 }
-#rss .rss:before{
+#rss .rss:before {
   content: "";
   border-radius: 50%;
   width: 30%;
@@ -104,30 +101,26 @@
 }
 /*}}}*/
 /*{{{铅笔*/
-#pincel{
+#pincel {
   width: 280px;
   height: 54px;
-  background: -webkit-linear-gradient(top, #f6d272 0%, #feda7c 20%, #d87706 20%, #edb425 75%, #c1701e 75%, #a2611d 100% );
+  background: -webkit-linear-gradient(top, #f6d272 0%, #feda7c 20%, #d87706 20%, #edb425 75%, #c1701e 75%, #a2611d 100%);
   position: relative;
-  margin: 0 auto;
+  margin: 150px auto;
 }
-#pincel:after{
-  background: 
-  -webkit-linear-gradient(0deg, rgba(255,255,255,0) 10px, rgba(0,0,0,0.5) 11px, rgba(255,255,255,0.9) 11px, rgba(255,255,255,0) 12px),
-  -webkit-linear-gradient(0deg, rgba(255,255,255,0) 20px, rgba(0,0,0,0.5) 21px, rgba(255,255,255,0.9) 21px, rgba(255,255,255,0) 22px),
-  -webkit-linear-gradient(0deg, rgba(255,255,255,0) 30px, rgba(0,0,0,0.5) 31px, rgba(255,255,255,0.9) 31px, rgba(255,255,255,0) 32px),
-  -webkit-linear-gradient(top, #686868 0%, #ebebeb 20%, #9d9b9c 20%, #fff 40%, #8f8f8f 50%, #fff 60%, #727270 80%, #979797 90%, #595959 100%);
-  content:" ";
+#pincel:after {
+  background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 10px, rgba(0, 0, 0, 0.5) 11px, rgba(255, 255, 255, 0.9) 11px, rgba(255, 255, 255, 0) 12px), -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 20px, rgba(0, 0, 0, 0.5) 21px, rgba(255, 255, 255, 0.9) 21px, rgba(255, 255, 255, 0) 22px), -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0) 30px, rgba(0, 0, 0, 0.5) 31px, rgba(255, 255, 255, 0.9) 31px, rgba(255, 255, 255, 0) 32px), -webkit-linear-gradient(top, #686868 0%, #ebebeb 20%, #9d9b9c 20%, #ffffff 40%, #8f8f8f 50%, #ffffff 60%, #727270 80%, #979797 90%, #595959 100%);
+  content: " ";
   height: 54px;
   display: block;
   position: absolute;
   width: 42px;
   right: -42px;
   top: 0;
-  box-shadow: inset 0px 0px 1px rgba(0,0,0,.5);
+  box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
-#pincel:before{
-  content:" ";
+#pincel:before {
+  content: " ";
   height: 54px;
   display: block;
   position: absolute;
@@ -136,14 +129,14 @@
   right: -84px;
   background: #c64f39;
   top: 0;
-  box-shadow: inset 1px 0px 3px rgba(0,0,0,.5);
+  box-shadow: inset 1px 0px 3px rgba(0, 0, 0, 0.5);
 }
-#pincel .p1{
-  background: 
-  -webkit-linear-gradient(246deg, transparent 0px, transparent 50px, #fff 50px),
-  -webkit-linear-gradient(259deg, transparent 0px, transparent 39px, #9c6637 39px),
-  -webkit-linear-gradient(285deg, transparent 0px, transparent 27px, #ce8a4d 27px, #ce8a4d 54px),
-  -webkit-linear-gradient(295deg, transparent 0px, transparent 24px, #e0b183 24px);
+#pincel .p1 {
+  /* background:  */
+  /* -webkit-linear-gradient(246deg, transparent 0px, transparent 50px, #fff 50px), */
+  /* -webkit-linear-gradient(259deg, transparent 0px, transparent 39px, #9c6637 39px), */
+  /* -webkit-linear-gradient(285deg, transparent 0px, transparent 27px, #ce8a4d 27px, #ce8a4d 54px), */
+  /* -webkit-linear-gradient(295deg, transparent 0px, transparent 24px, #e0b183 24px); */
   height: 54px;
   display: block;
   position: absolute;
@@ -151,5 +144,127 @@
   left: -60px;
   top: 0;
 }
-
+#pincel .p1:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  display: block;
+  border: 27px solid transparent;
+  border-right-color: #9c6637;
+  border-right-width: 60px;
+  position: absolute;
+  left: -27px;
+  top: 0px;
+}
+#pincel .p1:after {
+  content: " ";
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  display: block;
+  border: 10px solid transparent;
+  border-right-color: #000;
+  border-right-width: 20px;
+  position: absolute;
+  left: -9px;
+  top: 17px;
+}
 /*}}}*/
+/*{{{wamp图标*/
+#wamp {
+  width: 140px;
+  height: 140px;
+  margin: 100px auto;
+  overflow: hidden;
+  position: relative;
+  font-size: 100px;
+  line-height: 140px;
+}
+#wamp:before {
+  content: " ";
+  border: 20px solid #ff0198;
+  border-bottom: none;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  display: block;
+  width: 100px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#wamp:after {
+  content: " ";
+  border: 20px solid #ff0198;
+  border-top: none;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  display: block;
+  width: 100px;
+  height: 45px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#wamp .w {
+  position: absolute;
+  left: 35px;
+  top: 35px;
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background-image: -webkit-linear-gradient(0deg, #ff0198 20%, rgba(255, 1, 152, 0) 20%), -webkit-linear-gradient(0deg, rgba(255, 1, 152, 0) 80%, #ff0198 80%), radial-gradient(circle at 25% 70%, transparent 0%, transparent 10%, #ff0198 10%, #ff0198 30%, transparent 30%);
+}
+/*}}}*/
+#gossip {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto 0;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at 50% 75%, #ffffff 0%, #ffffff 10%, #000000 10%, #000000 28%, transparent 28%), radial-gradient(circle at 50% 25%, #000000 0%, #000000 10%, #ffffff 10%, #ffffff 28%, transparent 28%), linear-gradient(90deg, #ffffff 50%, transparent 50%), linear-gradient(90deg, #000000 50%, #000000 100%);
+  -webkit-animation-name: 'gossoprun';
+  /*动画名称*/
+  -webkit-animation-duration: 3s;
+  /*播放一次所持续时间*/
+  -webkit-animation-timing-function: linear;
+  /*动画播放频率*/
+  -webkit-animation-iteration-count: infinite;
+  /*动画播放次涒为无限次*/
+  -webkit-animation-play-state: paused;
+}
+#gossip:hover {
+  -webkit-animation-play-state: running;
+}
+@-webkit-keyframes 'gossoprun' {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#room {
+  width: 170px;
+  height: 140px;
+  background-image: radial-gradient(circle at 50% 120%, rgba(0, 0, 0, 0.7) 23%, rgba(0, 0, 0, 0) 48%), linear-gradient(30deg, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0) 20%), radial-gradient(circle at 50% 33%, #f8f6f7 32%, rgba(255, 255, 255, 0) 32%), radial-gradient(circle at -13% 55%, #f8f6f7 20%, rgba(255, 255, 255, 0) 20%), radial-gradient(circle at 113% 55%, #f8f6f7 20%, rgba(255, 255, 255, 0) 20%), linear-gradient(to bottom, #ef0015 20%, #b2000c 100%);
+  border-radius: 140px 140px 80px 80px;
+}
+#star {
+  background-image: -webkit-radial-gradient(transparent 80%, #ffffff 100%, #ffffff);
+  background-position: 10px 20px;
+  background-size: 32px 32px;
+}
+.div {
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  background-color: #63773F;
+  background-image: -webkit-radial-gradient(50% 59%, circle, #d2caab 3%, #364e27 4%, #364e27 11%, rgba(54, 78, 39, 0) 12%, rgba(54, 78, 39, 0)), -webkit-radial-gradient(50% 41%, circle, #364e27 3%, #d2caab 4%, #d2caab 11%, rgba(210, 202, 171, 0) 12%, rgba(210, 202, 171, 0)), -webkit-radial-gradient(50% 59%, circle, #d2caab 3%, #364e27 4%, #364e27 11%, rgba(54, 78, 39, 0) 12%, rgba(54, 78, 39, 0)), -webkit-radial-gradient(50% 41%, circle, #364e27 3%, #d2caab 4%, #d2caab 11%, rgba(210, 202, 171, 0) 12%, rgba(210, 202, 171, 0)), -webkit-radial-gradient(100% 50%, circle, #d2caab 16%, rgba(210, 202, 171, 0) 17%), -webkit-radial-gradient(0% 50%, circle, #364e27 16%, rgba(54, 78, 39, 0) 17%), -webkit-radial-gradient(100% 50%, circle, #d2caab 16%, rgba(210, 202, 171, 0) 17%), -webkit-radial-gradient(0% 50%, circle, #364e27 16%, rgba(54, 78, 39, 0) 17%);
+  background-position: 100px 0px,50px 0px,0 50px,0 50px,0 0%, 0 0%,50px 50px,50px 50px;
+  background-size: 100px 100px;
+}
