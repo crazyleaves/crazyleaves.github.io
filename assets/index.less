@@ -16,6 +16,11 @@
 .whole{
   width: 100%;
 }
+:before ,:after {
+  content: "";
+  display: block;
+}
+
 /*{{{盾牌*/
 #shield {
   margin: 50px auto;
@@ -39,7 +44,6 @@
     text-shadow: 1px 1px 0 #333;
   }
   &:after {
-    content: " ";
     position: absolute;
     top: 150px;
     left: 10%;
@@ -50,59 +54,38 @@
   }
 }
 /*}}}*/
-/*{{{订阅图标*/
+/*{{{ rss 订阅图标*/
 #rss {
   margin: 100px auto;
   width: 200px;
   height: 200px;
   border-radius: 15%;
-  background: -webkit-linear-gradient(top,#fa7105,#f6a21b);
+  background-image: 
+    -webkit-radial-gradient( 50% -400px , circle , rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 500px, transparent 500px),
+    -webkit-linear-gradient(top,#fa7105,#f6a21b)
+  ;
   position: relative;
   box-shadow: 1px 4px 8px #666;
   overflow: hidden;
-}
-#rss:before {
-  content:" ";
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 180px;
-  height: 180px;
-  border: 5px solid rgba(255,255,255,0.5);
-  display: block;
-  border-radius: 15%;
-
-}
-#rss:after {
-  content:" ";
-  position: absolute;
-  top: -100%;
-  left: -75%;
-  width: 250%;
-  height: 150%;
-  background: rgba(255,255,255,0.2);
-  display: block;
-  border-radius: 50%;
-}
-#rss .rss{
-  width: 70%;
-  height: 70%;
-  background: 
-  -webkit-radial-gradient(bottom left, circle, transparent 35%, #fff 35%, #fff 49%, transparent 49%, transparent 56%, #fff 56%, #fff 70%, transparent 70% );
-  position: relative;
-  top: 13%;
-  left: 15%;
-}
-#rss .rss:before{
-  content: "";
-  border-radius: 50%;
-  width: 30%;
-  height: 30%;
-  display: block;
-  background: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  &:before {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 180px;
+    height: 180px;
+    border: 5px solid rgba(255,255,255,0.5);
+    border-radius: 15%;
+  }
+  .rss{
+    width: 70%;
+    height: 70%;
+    background: 
+      -webkit-radial-gradient(20px 120px , circle , #fff 0px, #fff 20px, transparent 20px),
+      -webkit-radial-gradient(bottom left, circle, transparent 35%, #fff 35%, #fff 49%, transparent 49%, transparent 56%, #fff 56%, #fff 70%, transparent 70% );
+    position: relative;
+    top: 13%;
+    left: 15%;
+  }
 }
 /*}}}*/
 /*{{{铅笔*/
@@ -120,9 +103,7 @@
   -webkit-linear-gradient(0deg, rgba(255,255,255,0) 20px, rgba(0,0,0,0.5) 21px, rgba(255,255,255,0.9) 21px, rgba(255,255,255,0) 22px),
   -webkit-linear-gradient(0deg, rgba(255,255,255,0) 30px, rgba(0,0,0,0.5) 31px, rgba(255,255,255,0.9) 31px, rgba(255,255,255,0) 32px),
   -webkit-linear-gradient(top, #686868 0%, #ebebeb 20%, #9d9b9c 20%, #fff 40%, #8f8f8f 50%, #fff 60%, #727270 80%, #979797 90%, #595959 100%);
-  content:" ";
   height: 54px;
-  display: block;
   position: absolute;
   width: 42px;
   right: -42px;
@@ -130,9 +111,7 @@
   box-shadow: inset 0px 0px 1px rgba(0,0,0,.5);
 }
 #pincel:before{
-  content:" ";
   height: 54px;
-  display: block;
   position: absolute;
   border-radius: 0% 40% 40% 0%;
   width: 42px;
@@ -155,12 +134,10 @@
   top: 0;
 }
 #pincel .p1:before{
-  content: " ";
   width: 0;
   height: 0;
   font-size: 0;
   overflow: hidden;
-  display: block;
   border: 27px solid transparent;
   border-right-color: #9c6637;
   border-right-width: 60px;
@@ -169,12 +146,10 @@
   top: 0px;
 }
 #pincel .p1:after{
-  content: " ";
   width: 0;
   height: 0;
   font-size: 0;
   overflow: hidden;
-  display: block;
   border: 10px solid transparent;
   border-right-color: #000;
   border-right-width: 20px;
@@ -195,12 +170,10 @@
   font-size: 100px;
   line-height: 140px;
   &:before{
-    content: " ";
     border: 20px solid @wampcolor;
     border-bottom: none;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    display: block;
     width: 100px;
     height: 45px;
     position: absolute;
@@ -208,12 +181,10 @@
     left: 0;
   }
   &:after{
-    content: " ";
     border: 20px solid @wampcolor;
     border-top: none;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    display: block;
     width: 100px;
     height: 45px;
     position: absolute;
@@ -257,16 +228,181 @@
   &:hover  {
     -webkit-animation-play-state: running;
   }
-}
-@-webkit-keyframes 'gossoprun' {
-   from {
-    transform:rotate(0deg)
-   }
-   to {
-    transform:rotate(360deg)
-   }
+  @-webkit-keyframes 'gossoprun' {
+     from {
+      transform:rotate(0deg)
+     }
+     to {
+      transform:rotate(360deg)
+     }
+  }
 }
 
+
+// }}}
+// {{{ oil 
+#oil {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 100px auto 0;
+  border: 3px solid #a9b1b4;
+  border-radius: 50%;
+  background-image:
+    radial-gradient(circle at 50% 51%, #000 0%, #000 50%, transparent 50%),
+    radial-gradient(circle at 50% 49%, #9fa8b1 0%, #9fa8b1 50%, transparent 50%),
+    -webkit-linear-gradient(top,#f8fcff,#d3dde9)
+  ;
+  &:after  {
+    width: 133px;
+    height: 133px;
+    border-radius: 50%;
+    margin: 34px auto;
+    background-image:
+      -webkit-radial-gradient( 50% -120px , circle , rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.3) 200px, transparent 200px),
+      radial-gradient(circle at 50% 50%, #fff 0%, #fff 10%, transparent 10%),
+      radial-gradient(circle at 50% 50%, #000 0%, #000 55%, transparent 55%),
+      linear-gradient(0deg, #000 0%, #000 40%, transparent 40%),
+      linear-gradient(0deg, transparent 49%, #fff 49%, #fff 51%, transparent 51%),
+      linear-gradient(30deg, transparent 49%, #fff 49%, #fff 51%, transparent 51%),
+      linear-gradient(60deg, transparent 49%, #fff 49%, #fff 51%, transparent 51%),
+      linear-gradient(-30deg, transparent 49%, #fff 49%, #fff 51%, transparent 51%),
+      linear-gradient(-60deg, transparent 49%, #fff 49%, #fff 51%, transparent 51%),
+      linear-gradient(90deg, transparent 49%, #fff 49%, #fff 51%, transparent 51%)
+    ;
+  }
+  &:before  {
+    content: '0 1 0';
+    font-family: arial;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 45px;
+    height: 22px;
+    position: absolute;
+    border: 1px solid #879ac2;
+    top: 125px;
+    left: 76px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 1px #333;
+    background-image:
+      linear-gradient(90deg, transparent 65%, #818a91 65%, #818a91 66%, transparent 66%),
+      linear-gradient(90deg, transparent 32%, #818a91 32%, #818a91 33%, transparent 33%),
+      -webkit-linear-gradient(top,#95cae9,#4993d0)
+    ;
+  }
+  .arrow {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    margin-left: -8px;
+    width: 0px;
+    height: 0px;
+    border: 8px solid transparent;
+    border-bottom-color: red;
+    border-bottom-width: 50px;
+    transform: rotate(-90deg);
+    transform-origin: 9px 67px;
+    -webkit-animation-name: 'oil'; /*动画名称*/
+    -webkit-animation-duration: 3s;/*播放一次所持续时间*/
+    -webkit-animation-fill-mode: forwards;/*动画结束状态*/
+    -webkit-animation-timing-function: linear;/*动画播放频率*/
+    -webkit-animation-iteration-count: infinite;/*动画播放次涒为无限次*/
+    -webkit-animation-direction: alternate;
+    -webkit-animation-play-state: paused;
+  }
+  &:hover  {
+    .arrow  {
+      -webkit-animation-play-state: running;
+    }
+  }
+  @-webkit-keyframes 'oil' {
+   0% {
+    transform: rotate(-90deg);
+    // -webkit-transform-origin: 38px 60px;
+   }
+   100% {
+    transform:rotate(90deg);
+   }
+  }
+}
+
+// }}}
+// {{{ car
+#car {
+  width: 300px;
+  height: 180px;
+  position: relative;
+  margin: 100px auto 0;
+  border-radius: 300px 300px 0 0;
+  // border-bottom: 10px solid #064a5d;
+  background-color: #88bcc7;
+  background-image:
+    // radial-gradient(circle at 78% 94%, red 11%, transparent 11%),
+    linear-gradient(0deg, #0a4b5f 10%, transparent 10%),
+    radial-gradient(circle at -5px 74%, #bdd5d9 5%, #337180 5%, #337180 6%,transparent 6%),
+    radial-gradient(circle at 303px 74%, #bdd5d9 5%, #337180 5%, #337180 6%,transparent 6%),
+    radial-gradient(circle at 21% 94%, #000 15%, transparent 15%),
+    radial-gradient(circle at 78% 94%, #000 15%, transparent 15%),
+    radial-gradient(circle at -35% 100%, #a3d2dc 38%, #7bb4bf 38%, #7bb4bf 48%,transparent 48%),
+    radial-gradient(circle at 135% 100%, #a3d2dc 38%, #7bb4bf 38%, #7bb4bf 48%,transparent 48%),
+    radial-gradient(circle at 50% 80%,transparent 65%, #3d818e 65%),
+    linear-gradient(0deg, #7bb4bf, #a3d2dc)
+  ;
+  &:after  {
+    width: 240px;
+    height: 90px;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    margin-left: -120px;
+    border-bottom: 2px solid #3d818e;
+    background-image:
+      linear-gradient(90deg, transparent 49%, #3d818e 49%, #3d818e 52%, transparent 52%),
+      radial-gradient(circle at 50% 135%, #f4f7fc 70%, #3d818e 70%, transparent 72%)
+    ;
+  }
+  .lun {
+    position: absolute;
+    top: 135px;
+    -webkit-animation-name: 'carrun'; /*动画名称*/
+    -webkit-animation-duration: 3s;/*播放一次所持续时间*/
+    -webkit-animation-timing-function: linear;/*动画播放频率*/
+    -webkit-animation-iteration-count: infinite;/*动画播放次涒为无限次*/
+    -webkit-animation-play-state: paused;
+    &:after {
+      width: 53px;
+      height: 53px;
+      line-height: 50px;
+      border-radius: 50%;
+      content: "★";
+      color: #fff;
+      font-size: 50px;
+      background: #000;
+      border: 8px solid #fff;
+    }
+    &:nth-child(2) {
+      left: 29px;
+    }
+    &:nth-child(1) {
+      right: 29px;
+    }
+  }
+  &:hover  {
+    .lun {
+      -webkit-animation-play-state: running;
+    }
+  }
+  @-webkit-keyframes 'carrun' {
+     from {
+      transform:rotate(0deg)
+     }
+     to {
+      transform:rotate(360deg)
+     }
+  }
+}
 
 // }}}
 
@@ -292,22 +428,3 @@
   background-size: 32px 32px;
 }
 // }}}
-.div{
- width:200px;
-  height:200px;
-  margin-top:10px;
-  border: 1px solid #ddd;
-  background-color: #63773F;
-  background-image: 
-  -webkit-radial-gradient(50% 59% , circle , #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54, 78, 39, 0) 12%, rgba(54, 78, 39, 0)),
-  -webkit-radial-gradient(50% 41% , circle , #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210, 202, 171, 0) 12%, rgba(210, 202, 171, 0)),
-  -webkit-radial-gradient(50% 59% , circle , #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54, 78, 39, 0) 12%, rgba(54, 78, 39, 0)),
-  -webkit-radial-gradient(50% 41% , circle , #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210, 202, 171, 0) 12%, rgba(210, 202, 171, 0)),
-  -webkit-radial-gradient(100% 50% , circle , #D2CAAB 16%, rgba(210, 202, 171, 0) 17%),
-  -webkit-radial-gradient(0% 50% , circle , #364E27 16%, rgba(54, 78, 39, 0) 17%),
-  -webkit-radial-gradient(100% 50% , circle , #D2CAAB 16%, rgba(210, 202, 171, 0) 17%),
-  -webkit-radial-gradient(0% 50% , circle , #364E27 16%, rgba(54, 78, 39, 0) 17%)
-  ;
-  background-position: 100px 0px,50px 0px,0 50px,0 50px,0 0%, 0 0%,50px 50px,50px 50px;
-  background-size: 100px 100px;
-}
