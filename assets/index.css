@@ -284,6 +284,16 @@
     transform: rotate(90deg);
   }
 }
+#carbg {
+  height: 400px;
+  position: relative;
+  background-image: linear-gradient(0deg, transparent 15%, #6b6a70 15%, #6b6a70 17%, #ffffff 17%, #ffffff 18%, #6b6a70 18%, #6b6a70 50%, #ffffff 50%, #ffffff 51%, #6b6a70 51%, #6b6a70 53%, transparent 53%);
+}
+#carbg:after {
+  height: 0px;
+  border-top: 4px dashed #fff;
+  margin-top: -15px;
+}
 #car {
   width: 300px;
   height: 180px;
