@@ -267,7 +267,7 @@
   -webkit-animation-fill-mode: forwards;
   /*动画结束状态*/
   -webkit-animation-timing-function: linear;
-  /*动画播放频率*/
+  /**/
   -webkit-animation-iteration-count: infinite;
   /*动画播放次涒为无限次*/
   -webkit-animation-direction: alternate;
@@ -321,7 +321,7 @@
   -webkit-animation-duration: 3s;
   /*播放一次所持续时间*/
   -webkit-animation-timing-function: linear;
-  /*动画播放频率*/
+  /**/
   -webkit-animation-iteration-count: infinite;
   /*动画播放次涒为无限次*/
   -webkit-animation-play-state: paused;
@@ -354,6 +354,144 @@
     transform: rotate(360deg);
   }
 }
+/*{{{ weather*/
+#weather {
+  margin: 100px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 15%;
+  background-image: -webkit-linear-gradient(top, #4fbbf9, #1982f5);
+  position: relative;
+  box-shadow: 1px 4px 8px #333;
+  overflow: hidden;
+}
+#weather .rain {
+  transform: rotate(13deg);
+  width: 40%;
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  overflow: hidden;
+}
+#weather .rain:after {
+  width: 8px;
+  height: 14px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  background: #fff;
+  box-shadow: 46px 3px 0 -1px #ffffff, 46px 23px 0 -1px #ffffff, 46px 55px 0 -1px #ffffff, 31px 13px 0 -1px #ffffff, 31px 41px 0 -1px #ffffff, 31px 66px 0 -1px #ffffff, 15px 12px 0 -1px #ffffff, 15px 37px 0 -1px #ffffff, 15px 67px 0 -1px #ffffff, 0px 70px 0 -1px #ffffff, 0px 20px 0 -1px #ffffff, 0px 42px 0 -1px #ffffff;
+  opacity: 0;
+  -webkit-animation: 1s 15s rain infinite;
+}
+#weather:before {
+  position: absolute;
+  top: 60%;
+  left: -55%;
+  width: 38%;
+  height: 38%;
+  background-image: radial-gradient(#f3e09c 10%, #ffbb2f 70%);
+  border-radius: 50%;
+  -webkit-animation: 12s 0s sun 1 forwards;
+}
+#weather:after {
+  width: 63%;
+  height: 40%;
+  position: absolute;
+  top: 30%;
+  left: 120%;
+  background-image: radial-gradient(circle at 45% 75%, #ffffff 41%, transparent 41%), radial-gradient(circle at 24% 66%, #ffffff 24%, transparent 24%), radial-gradient(circle at 69% 61%, #ffffff 31%, transparent 31%), radial-gradient(circle at 44% 42%, #ffffff 41%, transparent 41%);
+  opacity: 0.9;
+  -webkit-animation: 20s 3s cloud 1 forwards;
+}
+@-webkit-keyframes 'sun' {
+  18% {
+    top: 20%;
+    left: 15%;
+    box-shadow: 0px 0px 35px rgba(255, 244, 6, 0.1);
+  }
+  23% {
+    box-shadow: 0px 0px 35px rgba(255, 244, 6, 0.1);
+  }
+  28% {
+    box-shadow: 0px 0px 35px #fff406;
+  }
+  33% {
+    box-shadow: 0px 0px 35px rgba(255, 244, 6, 0.1);
+  }
+  38% {
+    box-shadow: 0px 0px 35px #fff406;
+  }
+  43% {
+    box-shadow: 0px 0px 35px rgba(255, 244, 6, 0.9);
+  }
+  50% {
+    box-shadow: 0px 0px 35px rgba(255, 244, 6, 0.1);
+    top: 20%;
+    left: 15%;
+  }
+  70% {
+    top: 20%;
+    left: 15%;
+  }
+  100% {
+    top: 60%;
+    left: -55%;
+  }
+}
+@-webkit-keyframes 'cloud' {
+  0% {
+    left: 120%;
+  }
+  30% {
+    left: 24%;
+  }
+  40% {
+    left: 24%;
+    top: 30%;
+    margin-left: 0px;
+  }
+  50% {
+    left: 24%;
+    top: 15%;
+    margin-left: -10px;
+    -webkit-filter: invert(0);
+  }
+  55% {
+    left: 24%;
+    top: 15%;
+    margin-left: -10px;
+    -webkit-filter: invert(0.8);
+  }
+  57% {
+    -webkit-filter: invert(0);
+  }
+  60% {
+    -webkit-filter: invert(0.8);
+  }
+  100% {
+    left: 24%;
+    top: 15%;
+    margin-left: -10px;
+    -webkit-filter: invert(0.8);
+  }
+}
+@-webkit-keyframes 'rain' {
+  0% {
+    margin-top: -130px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+/*}}}*/
 #room {
   width: 170px;
   height: 140px;
