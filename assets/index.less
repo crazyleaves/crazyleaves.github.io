@@ -460,10 +460,10 @@
         0px 42px 0 -1px #ffffff
         ;
         opacity: 0;
-        -webkit-animation: 1s 15s rain infinite;
+      -webkit-animation: 1s 15s rain infinite;
+      -webkit-animation-play-state: paused;
     }
   }
-  // -webkit-animation-play-state: paused;
   &:before {
     position: absolute;
     top: 60%;
@@ -475,6 +475,7 @@
     ;
     border-radius: 50%;
     -webkit-animation: 12s 0s sun 1 forwards;
+    -webkit-animation-play-state: paused;
   }
   &:after {
     width: 63%;
@@ -490,6 +491,20 @@
     ;
     opacity: 0.9;
     -webkit-animation: 20s 3s cloud 1 forwards;
+    -webkit-animation-play-state: paused;
+  }
+  &:hover  {
+    .rain  {
+      &:after  {
+        -webkit-animation-play-state: running;
+      }
+    }
+    &:before {
+      -webkit-animation-play-state: running;
+    }
+    &:after {
+      -webkit-animation-play-state: running;
+    }
   }
   @-webkit-keyframes 'sun'
   {
@@ -581,6 +596,49 @@
   }
 }
 /*}}}*/
+// {{{ light 
+#chrome {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto 0;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #999;
+  position: relative;
+  overflow: hidden;
+  background-image:
+    // radial-gradient(circle at 50% 50%, #4f8ccb 25%, transparent 25%),
+    radial-gradient(circle at 50% 50%, #eff3f4 31%, transparent 31%),
+    linear-gradient(300deg, #fcd20c 35%, transparent 35%),
+    linear-gradient(60deg, #4db749 35%, transparent 35%),
+    linear-gradient(0deg, transparent 72%, #df2228 72%),
+    linear-gradient(0deg, #4db749 40.5%, transparent 40%),
+    linear-gradient(60deg, transparent 60.5%, #fcd20c 60.5%),
+    linear-gradient(300deg, transparent 60.5%, #df2228 60.5%,)
+  ;
+  &:before  {
+    width: 20%;
+    height: 20%;
+    background: #df2228;
+    position: absolute;
+    right: 0;
+    top: 8.5%;
+  }
+  &:after  {
+    width: 36%;
+    height: 36%;
+    border-radius: 50%;
+    top: 32%;
+    left: 32%;
+    position: absolute;
+    background-image:
+      linear-gradient(0deg, #2270ae, #7caedf)
+    ;
+    box-shadow: inset 2px 0px 4px #666;
+  }
+}
+
+
+// }}}
 
 #room{
   width: 170px;

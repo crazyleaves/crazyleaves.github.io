@@ -385,6 +385,7 @@
   box-shadow: 46px 3px 0 -1px #ffffff, 46px 23px 0 -1px #ffffff, 46px 55px 0 -1px #ffffff, 31px 13px 0 -1px #ffffff, 31px 41px 0 -1px #ffffff, 31px 66px 0 -1px #ffffff, 15px 12px 0 -1px #ffffff, 15px 37px 0 -1px #ffffff, 15px 67px 0 -1px #ffffff, 0px 70px 0 -1px #ffffff, 0px 20px 0 -1px #ffffff, 0px 42px 0 -1px #ffffff;
   opacity: 0;
   -webkit-animation: 1s 15s rain infinite;
+  -webkit-animation-play-state: paused;
 }
 #weather:before {
   position: absolute;
@@ -395,6 +396,7 @@
   background-image: radial-gradient(#f3e09c 10%, #ffbb2f 70%);
   border-radius: 50%;
   -webkit-animation: 12s 0s sun 1 forwards;
+  -webkit-animation-play-state: paused;
 }
 #weather:after {
   width: 63%;
@@ -405,6 +407,16 @@
   background-image: radial-gradient(circle at 45% 75%, #ffffff 41%, transparent 41%), radial-gradient(circle at 24% 66%, #ffffff 24%, transparent 24%), radial-gradient(circle at 69% 61%, #ffffff 31%, transparent 31%), radial-gradient(circle at 44% 42%, #ffffff 41%, transparent 41%);
   opacity: 0.9;
   -webkit-animation: 20s 3s cloud 1 forwards;
+  -webkit-animation-play-state: paused;
+}
+#weather:hover .rain:after {
+  -webkit-animation-play-state: running;
+}
+#weather:hover:before {
+  -webkit-animation-play-state: running;
+}
+#weather:hover:after {
+  -webkit-animation-play-state: running;
 }
 @-webkit-keyframes 'sun' {
   18% {
@@ -492,6 +504,34 @@
   }
 }
 /*}}}*/
+#chrome {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto 0;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #999;
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(circle at 50% 50%, #eff3f4 31%, transparent 31%), linear-gradient(300deg, #fcd20c 35%, transparent 35%), linear-gradient(60deg, #4db749 35%, transparent 35%), linear-gradient(0deg, transparent 72%, #df2228 72%), linear-gradient(0deg, #4db749 40.5%, transparent 40%), linear-gradient(60deg, transparent 60.5%, #fcd20c 60.5%), linear-gradient(300deg, transparent 60.5%, #df2228 60.5%);
+}
+#chrome:before {
+  width: 20%;
+  height: 20%;
+  background: #df2228;
+  position: absolute;
+  right: 0;
+  top: 8.5%;
+}
+#chrome:after {
+  width: 36%;
+  height: 36%;
+  border-radius: 50%;
+  top: 32%;
+  left: 32%;
+  position: absolute;
+  background-image: linear-gradient(0deg, #2270ae, #7caedf);
+  box-shadow: inset 2px 0px 4px #666;
+}
 #room {
   width: 170px;
   height: 140px;
