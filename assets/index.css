@@ -512,7 +512,7 @@
   box-shadow: 0px 0px 10px #999;
   position: relative;
   overflow: hidden;
-  background-image: radial-gradient(circle at 50% 50%, #eff3f4 31%, transparent 31%), linear-gradient(300deg, #fcd20c 35%, transparent 35%), linear-gradient(60deg, #4db749 35%, transparent 35%), linear-gradient(0deg, transparent 72%, #df2228 72%), linear-gradient(0deg, #4db749 40.5%, transparent 40%), linear-gradient(60deg, transparent 60.5%, #fcd20c 60.5%), linear-gradient(300deg, transparent 60.5%, #df2228 60.5%);
+  background-image: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.2) 10%, transparent 40%), radial-gradient(circle at 50% 50%, #eff3f4 31%, transparent 31%), linear-gradient(300deg, #fcd20c 35%, transparent 35%), linear-gradient(60deg, #4db749 35%, transparent 35%), linear-gradient(0deg, transparent 72%, #df2228 72%), linear-gradient(0deg, #4db749 40.5%, transparent 40%), linear-gradient(60deg, transparent 60.5%, #fcd20c 60.5%), linear-gradient(300deg, transparent 60.5%, #df2228 60.5%);
 }
 #chrome:before {
   width: 20%;
